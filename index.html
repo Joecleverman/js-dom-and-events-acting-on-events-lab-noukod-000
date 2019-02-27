@@ -11,6 +11,31 @@
     </div>
     <script>
       // your code here
+   function retrieveEmployeeInformation(){
+        return document.querySelector("input[type='name']").value;
+      }
+      function addNewElementAsLi(){
+        employeeInfo=retrieveEmployeeInformation();
+        let li=document.createElement('li')
+        li.innerHTML=employeeInfo;
+        let ul=document.querySelector("ul")
+        ul.append(li);
+      }
+      function addNewLiOnClick(){
+        let submit=document.querySelector("input[type='submit']")
+        submit.addEventListener('click',(e)=>{
+          e.preventDefault();
+          addNewElementAsLi();
+        })
+      }
+      function clearEmployeeListOnLinkClick(){
+        let button=document.querySelector("a")
+        button.addEventListener('click',(e)=>{
+          e.preventDefault();
+          let ul=document.querySelector("ul");
+          ul.innerHTML="";
+        })
+      }
     </script>
   </body>
 </html>
