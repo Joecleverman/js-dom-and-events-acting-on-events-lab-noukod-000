@@ -8,10 +8,17 @@
   <body>
     <div id="game">
       <div id="dodger" style="bottom: 0px; left: 180px;"></div>
+      <form>
+        <input type="name"/>
+        <input type="submit"/>
+      </form>
+      <ul class="employee-list">
+      </ul>
+      <a href="#">Clear employee list</a>
     </div>
     <script>
       // your code here
-   function retrieveEmployeeInformation(){
+      function retrieveEmployeeInformation(){
         return document.querySelector("input[type='name']").value;
       }
       function addNewElementAsLi(){
